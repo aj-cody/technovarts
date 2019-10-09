@@ -1,29 +1,47 @@
-<% inlcude {./partials/header.ejs} %>
+<% include partials/header %>
 
 <p>
-    <button class="btn btn-primary" data-toggle="collapse" data-toggle="#login" role="button">
+    <button class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#login">
         Login
     </button>
-    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#signup">
+    <button class="btn btn-primary"
+            type="button"
+            data-toggle="collapse"
+            data-target="#signup">
         Sign Up!
     </button>
 </p>
-    <div class="collapse" id="login">
-        <h1>Login!</h1>
-            <form action="/login" method="post">
-                <input type="text" name="username" placeholder="username">
-                <input type="password" name="password" placeholder="password">
-                <button>Login</button>
-            </form>
-      </div>
 
-    <div class="collapse" id="signup">
-        <form action="/register" method="post">
-            <input type="text" name="username" placeholder="username">
-            <input type="password" name="password" placeholder="password">
-            <button>Sign Up</button>
-        </form>
-        </div>
+<div class="collapse multi-collapse"
+     id="login">
+    <form action="/login"
+          method="post">
+        <input type="text"
+               name="username"
+               placeholder="username">
+        <input type="password"
+               name="password"
+               placeholder="password">
+        <button>Login</button>
+    </form>
+</div>
+
+<div class="collapse multi-collapse"
+     id="signup">
+    <form action="/register"
+          method="post">
+        <input type="text"
+               name="username"
+               placeholder="username">
+        <input type="password"
+               name="password"
+               placeholder="password">
+        <button>Sign Up</button>
+    </form>
+</div>
 
 
-<% include {./partials/footer.ejs} %>
+<% include partials/footer %>
