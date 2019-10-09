@@ -2,6 +2,25 @@
 
 <form action="/register"
       method="post">
+
+    <% var val = ["individual", "cafe", "hotel", "restaurants"] %>
+
+    <div class="form-group">
+        <label for="type">User Type</label>
+
+        <select class="form-control" id="type">
+            <% val.forEach(function (value) { %>
+                    <option value="<%= value %>"><%= value %></option>
+            <% }) %>
+        </select>
+
+<!--        <select class="form-control" id="type">-->
+<!--            <option typeof="text" value="individual" selected>Individual</option>-->
+<!--            <option value="cafe">Cafe</option>-->
+<!--            <option value="hotel">Hotel</option>-->
+<!--            <option value="restaurants">Restaurants</option>-->
+<!--        </select>-->
+    </div>
     <input type="text"
            name="username"
            placeholder="username">

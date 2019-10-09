@@ -1,8 +1,8 @@
 var express = require("express");
 var router = express.Router();
 
-router.get("/", function (req, res) {
-    res.render("seller/sellerHome");
+router.get("/form", function (req, res) {
+    res.render("./seller/sellForm");
 });
 
 module.exports = router;

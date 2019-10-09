@@ -6,7 +6,9 @@ var express     = require("express"),
     passport = require("passport"),
     LocalStrategy = require("passport-local");
 
-var indexRoutes = require("./routes/index");
+var indexRoutes = require("./routes/index"),
+    buyerRoutes = require("./routes/buyer"),
+    sellerRoutes = require("./routes/seller");
 
 mongoose.connect("mongodb://localhost:27017/food_kart", { useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
@@ -30,6 +32,8 @@ app.use(function (req, res, next) {
 });
 
 app.use(indexRoutes);
+app.use("/buyer", buyerRoutes);
+app.use("/seller", sellerRoutes);
 
 app.listen("2020", function () {
     console.log("Server has started!")
