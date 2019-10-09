@@ -1,199 +1,29 @@
-<div id="showcase">
-    <header>
-        <nav class='cf'>
-            <ul class='cf'>
-                <li class="hide-on-small">
-                    <a href="#showcase">myTunes</a>
-                </li>
-                <li>
-                    <a href='#showcase'>Overview</a>
-                </li>
-                <li>
-                    <a href='#music'>Music</a>
-                </li>
-                <li>
-                    <a href='#video'>Video</a>
-                </li>
-                <li>
-                    <a href='#giftcards'>Giftcards</a>
-                </li>
-            </ul>
-            <a href='#' id='openup'>myTunes</a>
-        </nav>
-    </header>
+<% inlcude {./partials/header.ejs} %>
 
-    <div class="container">
-        <a href=""></a>
-    </div>
+<p>
+    <button class="btn btn-primary" data-toggle="collapse" data-toggle="#login" role="button">
+        Login
+    </button>
+    <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#signup">
+        Sign Up!
+    </button>
+</p>
+    <div class="collapse" id="login">
+        <h1>Login!</h1>
+            <form action="/login" method="post">
+                <input type="text" name="username" placeholder="username">
+                <input type="password" name="password" placeholder="password">
+                <button>Login</button>
+            </form>
+      </div>
 
-    <div class="section-main container">
-        <h1>myTunes</h1>
-        <h2>Your music and movies take centre stage.</h2>
-        <p class="lead hide-on-small">
-            myTunes is the best way to organise and enjoy the music and movies
-            you already have — and shop for the ones you want.
-            Enjoy all the entertainment myTunes has to offer on
-            your Mac and PC.
-        </p>
-
-    </div>
-</div>
-<!--MUSIC SECTION-->
-<section id="music" class="section">
-    <div class="container"><h2 class="section-head">
-            <i class="fas fa-music"></i>Music</h2>
-        <h3>50 million songs. Zero ads. </h3>
-        <p class="lead">Stream over 50 million songs, ad-free. Or download albums and tracks to listen
-            to offline. All the music in your personal myTunes library — no matter where it
-            came from — lives alongside the Blue Music catalogue. Start your free three-
-            month trial —no commitment, cancel anytime.</p>
-        <a href="#" class="btn btn-primary">Start your free trial today.</a>
-        <p class="text-light"> Blue Music is available in myTunes,
-            and for iOS and Android devices.</p>
-        <img src="image/mus8.png">
-    </div>
-
-</section>
-<!--VIDEO SECTION-->
-<section id="video" class="section bg-light">
-    <div class="container">
-        <h3>The movie collection you always wished for. Granted.</h3>
-        <p class="lead">With over 100,000 movies to choose from, there’s always something great to
-            watch on myTunes.1 And if you watch on Blue TV 4K, you’ll be able to enjoy a
-            tremendous selection of your favourite content in 4K HDR. So get ready to
-            enjoy the hit movies you’ve been waiting to see — anytime, anywhere. Just
-            tap to play or even download if you’re going somewhere you won’t have Wi-Fi.</p>
-        <a href="#" class="btn btn-primary">Read More</a>
-        <img src="image/mus11.png">
-    </div>
-</section>
-<!--ENTERTAINMENT SECTION-->
-<section id="entertainment" class="section">
-    <div class="container">
-        <h3>
-            A world of entertainment.
-            Available wherever you are.
-        </h3>
-        <p class="lead">
-            The iTunes Store is available on all your devices, which means you can buy that catchy
-            song you just heard or rent that movie you’ve been meaning to see, anytime you want.
-            All the music and movies you buy are immediately available, no matter how you want
-            to play them.
-        </p>
-
-    </div>
-</section>
-<!--GIFTCARD SECTION-->
-<section id="giftcard" class="section">
-    <div class="container">
-        <div class="gift-cards">
-            <div>
-                <img src="image/mus13.png" alt="">
-            </div>
-            <div><h2>Giftcards</h2>
-
-                <p>
-                    Whats left now get your friends and family
-                    hooked up with the gifts.
-                </p>
-                <p>
-                    Already have an Blue myTunes music giftcard?
-                </p>
-            </div>
-            <hr>
-            <a href="#" class="text-secondary"><i class="fasfa-cheveron-right"></i>Redeem</a>
-
+    <div class="collapse" id="signup">
+        <form action="/register" method="post">
+            <input type="text" name="username" placeholder="username">
+            <input type="password" name="password" placeholder="password">
+            <button>Sign Up</button>
+        </form>
         </div>
-    </div>
-</section>
-<!--FOOTER-->
-<footer>
-    <div class="container">
-        <div class="footer-cols">
-            <ul>
-                <li>Shop & Learn</li>
-                <li>
-                    <a href='#'>Music</a>
-                </li>
-                <li>
-                    <a href='#'>Movies</a>
-                </li>
-                <li>
-                    <a href='#'>Podcasts</a>
-                </li>
-                <li>
-                    <a href='#'>Shows</a>
-                </li>
-                <li>
-                    <a href='#'>Apps</a>
-                </li>
-                <li>
-                    <a href='#'>Giftcards</a>
-                </li>
-
-            </ul>
-            <ul>
-                <li>Blue Store</li>
-                <li>
-                    <a href='#'>Find a store</a>
-                </li>
-                <li>
-                    <a href='#'>Today at Blue</a>
-                </li>
-                <li>
-                    <a href='#'>Blue Camp</a>
-                </li>
-                <li>
-                    <a href='#'>Financing</a>
-                </li>
-                <li>
-                    <a href='#'>Order status</a>
-                </li>
 
 
-            </ul>
-            <ul>
-                <li>Education & Bussiness</li>
-                <li>
-                    <a href='#'>Blue & Education</a>
-                </li>
-                <li>
-                    <a href='#'>Shop for College</a>
-                </li>
-                <li>
-                    <a href='#'>Blue & Bussiness</a>
-                </li>
-                <li>
-                    <a href='#'>Shop for Bussiness</a>
-                </li>
-                <li>
-                    <a href='#'>Jobs</a>
-                </li>
-
-            </ul>
-            <ul>
-                <li>About Blue</li>
-
-                <li>
-                    <a href='#'>Newsroom</a>
-                </li>
-                <li>
-                    <a href='#'>Blue Leadership</a>
-                </li>
-                <li>
-                    <a href='#'>Investors</a>
-                </li>
-                <li>
-                    <a href='#'>Events</a>
-                </li>
-                <li>
-                    <a href='#'>Contact Blue</a>
-                </li>
-
-            </ul>
-        </div>
-    </div>
-    <div class="footer-bottom text-center">
-        Copyright &copy; 2019 Blue myTunes
-    </div>
-</footer>
+<% include {./partials/footer.ejs} %>
