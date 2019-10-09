@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+body{ font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    height:auto;
+    background-image: url(https://unsplash.com/photos/sTPy-oeA3h0);
+
+}
+h1,h2{
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 5rem;
+    color:rgb(78, 29, 29);
+
+}
+h2{
+    font-size: 2rem;
+}

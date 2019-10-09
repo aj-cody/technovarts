@@ -7,6 +7,10 @@ router.get("/", function (req, res) {
     res.render("landing");
 });
 
+router.get("/home", function (req, res) {
+    res.render("home");
+});
+
 //=======================
 // AUTHENTICATION ROUTES
 //=======================
@@ -35,7 +39,7 @@ router.get("/login", function (req, res) {
 });
 //handling login logic
 router.post("/login", passport.authenticate("local", {
-    successRedirect: "/",
+    successRedirect: "/home",
     failureRedirect: "/login"
 }), function (req, res) {
 });
