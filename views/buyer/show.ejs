@@ -1,0 +1,26 @@
+<% include ../partials/buyerHeader %>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 ">
+            <div class="thumbnail">
+                <img class="img-responsive" style="width: 20rem; height: 30rem" src="<%= item.image %>">
+                <div class="caption-full">
+                    <h4><a><%= item.productName %></a></h4>
+                    <p>Expiry Date: <%= item.expiryDay%>/<%= item.expiryMonth%>/<%= item.expiryYear%></p>
+                    <h4 class="pull-right">MRP: Rs. <%= item.mrp %></h4>
+                    <p>Quantity: <%= item.quantity %></p>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-success" href="#">Call/Chat: <%= item.contactNo %></a>
+                    <p>Address: <%= item.address %></p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</div>
+
+<% include ../partials/buyerFooter %>
