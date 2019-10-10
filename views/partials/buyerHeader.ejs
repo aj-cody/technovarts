@@ -5,29 +5,37 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    </head>
+    <link rel="stylesheet" href="/stylesheets/buyer.css">  
+    <script src="https://kit.fontawesome.com/5e5401078c.js"></script>
+  </head>
   <body>
     <header class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="" alt="" width="70px" height="70px">
+        <a class="navbar-brand" href="/home">
+          <img src="/images/foodpage.png"  alt="Company Logo" width="70px" height="70px"/>
         </a>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search Item">
+            <div class="input-group-append">
+              <button class="btn btn-success" type="button">Search</button>
+            </div>
+          </div>
         <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
             <li class="nav-item">
-                <a href="" class="btn btn-dark">
+                <a href="/logout" class="btn btn-dark">
                    Logout
                  </a>
                 </li>
             <li class="nav-item">
-                  <a class="nav-link" href="" title="profile">
-                    <img src=" " alt="My Account" placeholder="View profile">
+                  <a class="nav-link" href="/profile" title="profile">
+                    <img src="/images/profile.svg" alt="My Account">
                   </a>
             </li>
         </ul>
     </header>
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-center">
+    <nav class="navbar navbar-expand-lg navbar-light">
             <ul class="navbar-nav mr-auto">
               <li class="nav-item">
-                <a class="nav-link" href="" title="Home">
+                <a class="nav-link" href="/buyer/home" title="Home">
                   Home
                 </a>
               </li>
@@ -37,8 +45,8 @@
                 </a>
               </li>
             <li class="nav-item">
-                <a class="nav-link" href=""  title="Block">
-                  Block
+                <a class="nav-link" href="/home"  title="Back">
+                  Back
                 </a>
               </li>
             </ul>

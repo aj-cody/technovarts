@@ -1,39 +1,53 @@
 <% include ../partials/buyerHeader %>
 
-<aside class="sideBar">
-        <div class="sidebar-header">
-                <h4>SideBar</h4>
+
+<div class="d-flex"
+     id="wrapper">
+    <aside>
+        <!-- Sidebar -->
+        <div class="bg-light border-right"
+             id="sidebar-wrapper">
+            <div class="sidebar-heading">Side Bar</div>
+            <div class="list-group list-group-flush">
+                <a href="#"
+                   class="list-group-item list-group-item-action bg-light">Overview</a>
+                <a href="#"
+                   class="list-group-item list-group-item-action bg-light">Profile</a>
+                <a href="#"
+                   class="list-group-item list-group-item-action bg-light">Filters</a>
+                <a href="#"
+                   class="list-group-item list-group-item-action bg-light">Sort Features</a>
+                <a href="#"
+                   class="list-group-item list-group-item-action bg-light">Dashboard</a>
+                <a href="#"
+                   class="list-group-item list-group-item-action bg-light">Status</a>
             </div>
-            <ul class="list-unstyled">
-                 <p>Dummy Heading</p>
-                <li class="">
-                    <p>Home</p>
-                    <ul class="list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-                 <li>
-                    <a href="#">About</a>
-                </li>
-            </ul>
-    </aside>
-    <section>
-        <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="..." alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
         </div>
-    </section>
+    </aside>
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <% items.forEach(function (item) { %>
+                <div class="card"
+                     style="width: 18rem; margin-bottom: 20px">
+                    <img class="card-img-top"
+                         src="<%= item.image %>"
+                         alt="Card image cap"
+                         height="250px"
+                         width="200px">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= item.productName %></h5>
+                        <p>Expiry Date: <%= item.expiryDay%>/<%= item.expiryMonth%>/<%= item.expiryYear%></p>
+                        <p>Rs. <%= item.mrp/2 %></p>
+                    </div>
+                    <p class="text-center">
+                        <a href="/buyer/home/<%= item._id %>"
+                           class="btn btn-success">View</a>
+                    </p>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</div>
+
 
 <% include ../partials/buyerFooter %>

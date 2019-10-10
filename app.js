@@ -3,6 +3,7 @@ var express     = require("express"),
     bodyParser  = require("body-parser"),
     User = require("./models/user"),
     mongoose    = require("mongoose"),
+    seedDB = require("./seed"),
     passport = require("passport"),
     LocalStrategy = require("passport-local");
 
@@ -14,6 +15,7 @@ mongoose.connect("mongodb://localhost:27017/food_kart", { useNewUrlParser: true 
 app.use(bodyParser.urlencoded({extended: true}));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
+seedDB();
 
 app.use(require("express-session")({
     secret: "Once again Rusty wins the cutest dog!",
@@ -33,7 +35,7 @@ app.use(function (req, res, next) {
 
 app.use(indexRoutes);
 app.use("/buyer", buyerRoutes);
-app.use("/seller", sellerRoutes);
+app.use(sellerRoutes);
 
 app.listen("2020", function () {
     console.log("Server has started!")

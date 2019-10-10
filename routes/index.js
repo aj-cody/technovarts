@@ -11,6 +11,10 @@ router.get("/home", function (req, res) {
     res.render("home");
 });
 
+router.get("/profile", function (req, res) {
+    res.render("profile");
+});
+
 //=======================
 // AUTHENTICATION ROUTES
 //=======================
@@ -47,7 +51,7 @@ router.post("/login", passport.authenticate("local", {
 //logout route
 router.get("/logout", function (req, res) {
     req.logout();
-    res.redirect("/");
+    res.redirect("/login");
 });
 
 function isLoggedIn(req, res, next) {

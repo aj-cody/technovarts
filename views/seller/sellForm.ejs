@@ -1,111 +1,130 @@
-<!DOCtype html>
-<html lang="en">
-<head>
-    <title>Add Product Info</title>>
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-</head>
+<% include ../partials/sellerHeader %>
 
-<body>
-<form action="/home"
-      method="POST">
-    <div class="form-groups">
-        <label for="name">Product Name</label>
-        <input type="text"
-               class="form-control"
-               id="name"/>
-    </div>
-    <div class="form-groups">
-        <label for="expirymonth">Expiry Month</label>
-        <select class="form-control"
-                id="expirymonth">
-            <option value="January"
-                    selected>January
-            </option>
-            <option value="February">February</option>
-            <option value="March">March</option>
-            <option value="April">April</option>
-            <option value="May">May</option>
-            <option value="June">June</option>
-            <option value="July">July</option>
-            <option value="August">August</option>
-            <option value="September">September</option>
-            <option value="October">October</option>
-            <option value="November">November</option>
-            <option value="December">December</option>
-        </select>
-    </div>
+<div class="ui main text container segment">
+    <h1>SELL AND SAVE</h1>
+    <form class="ui form" action="/seller/form"
+          method="POST">
+        <div class="field">
+            <label for="name">Product Name</label>
+            <input type="text"
+                   class="form-control"
+                   id="name"
+                   name="productName"
+                   placeholder="product name"/>
+        </div>
 
-    <div class="form-groups">
-        <label for="year">Enter Year</label>
-        <input type="number"
-               class="form-control"
-               id="year"/>
-    </div>
+        <div class="field form-groups">
+            <label for="day">Enter date</label>
+            <input type="text"
+                   class="form-control"
+                   id="day"
+                   name="expiryDay"
+                   placeholder="expiry day(eg. 21)"/>
+            <!--            <select class="form-control"-->
+            <!--                    id="date">-->
+            <!--                <% for(var i = 1; i <= 31;i += 1) { %>-->
+            <!--                    <option value="<%= i %>"><%= i %></option>-->
+            <!--                <% } %>-->
+            <!--            </select>-->
+        </div>
 
-    <div class="form-groups">
-        <label for="date">Enter date</label>
-        <select class="form-control"
-                id="date">
-            <% for(var i = 1; i <= 31;i += 1) { %>
-                <option value="<%= i %>"><%= i %></option>
-            <% } %>
-        </select>
-    </div>
+        <div class="field form-groups">
+            <label for="expirymonth">Expiry Month</label>
+            <input type="number"
+                   class="form-control"
+                   id="expirymonth"
+                   name="expiryMonth"
+                   placeholder="expiry month (eg. 09)"/>
 
-    <div class="form-groups">
-        <label for="mrp">Enter MRP of the Product</label>
-        <input type="number"
-               class="form-control"
-               id="mrp"/>
-    </div>
+            <!--            <select class="form-control"-->
+            <!--                    id="expirymonth">-->
+            <!--                <option value="January"-->
+            <!--                        selected>January-->
+            <!--                </option>-->
+            <!--                <option value="February">February</option>-->
+            <!--                <option value="March">March</option>-->
+            <!--                <option value="April">April</option>-->
+            <!--                <option value="May">May</option>-->
+            <!--                <option value="June">June</option>-->
+            <!--                <option value="July">July</option>-->
+            <!--                <option value="August">August</option>-->
+            <!--                <option value="September">September</option>-->
+            <!--                <option value="October">October</option>-->
+            <!--                <option value="November">November</option>-->
+            <!--                <option value="December">December</option>-->
+            <!--            </select>-->
+        </div>
 
-    <button type="button"
-            class="btn btn-primary">Predict Current Selling Price(CSP)
-    </button>
+        <div class="field">
+            <label for="year">Enter Year</label>
+            <input type="text"
+                   class="form-control"
+                   id="year"
+                   name="expiryYear"
+                   placeholder="expiry year (eg. 2019)"
+            />
+        </div>
+
+        <div class="field form-groups">
+            <label for="mrp">Enter MRP of the Product</label>
+            <input type="text"
+                   class="form-control"
+                   id="mrp"
+                   name="mrp"
+                   placeholder="mrp (eg. 245)"/>
+        </div>
+
+        <button type="button"
+                class="btn btn-primary" onClick="getval()">Predict Current Selling Price(CSP)
+        </button>
+        <% function getval() { %>
+        <p><%= ((item.mrp + 20)*0.452252943 -74.00530209706562) %></p>
+        <%}%>
 
 
-    <div class="form-groups">
-        <label for="quantity">Quantity</label>
-        <input type="number"
-               class="form-control"
-               id="quantity"/>
-    </div>
+        <div class="field form-groups">
+            <label for="quantity">Quantity</label>
+            <input type="text"
+                   class="form-control"
+                   name="quantity"
+                   placeholder="quantity (eg. 5)"
+                   id="quantity"/>
+        </div>
 
-    <div class="form-groups">
-        <lablel for="contact">Contact</lablel>
-        <input type="number"
-               class="form-control"
-               id="contact">
-    </div>
+        <div class="field form-groups">
+            <lablel for="contact">Contact</lablel>
+            <input type="text"
+                   class="form-control"
+                   name="contactNo"
+                   placeholder="contact no."
+                   id="contact">
+        </div>
 
 
-    <div class="form-groups">
-        <label for="address">Address</label>
-        <input type="textarea"
-               class="form-control"
-               id="address">
-    </div>
+        <div class="field form-groups">
+            <label for="address">Address</label>
+            <textarea
+                    class="form-control"
+                    id="address"
+                    name="address"
+            ></textarea>
+        </div>
 
-    <div class="form-group">
-        <lablel></lablel>
-        <input type=""/>
-    </div>
+        <div class="form-group">
+            <label for="upload">Upload Images</label>
+            <input type="text"
+                   class="form-control"
+                   name="image"
+                   placeholder="url"
+                   id="upload">
+        </div>
 
-    <div class="form-group">
-        <label for="upload">Upload Images</label>
-        <input type="file"
-               class="form-control-file"
-               id="upload">
-    </div>
-
-</form>
-
-<button type="submit"
-        class="btn btn-success">Submit
-</button>
-</body>
-</html>
-
+        <div id="button">
+            <input type="submit"
+                   class="ui green big basic button">
+        </div>
+    </form>
+</div>
+<% include ../partials/sellerHeader %>
 
 

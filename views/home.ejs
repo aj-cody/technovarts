@@ -1,31 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>FooD Kart</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-<div class="">
+<% include partials/homeHeader %>
+
+<header class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <a class="navbar-brand" href="/home">
+                  <img src="/images/foodpage.png"  alt="Company Logo" width="40px" height="40px"/>
+                </a>
+                <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+                    <li class="nav-item">
+                        <a href="/logout" class="btn btn-dark">
+                           Logout
+                         </a>
+                        </li>
+                    <li class="nav-item">
+                          <a class="nav-link" href="/profile" title="profile">
+                            <img src="/images/profile.svg" alt="My Account">
+                          </a>
+                    </li>
+                </ul>
+        </header>
+<div class="container-body">
+<div id="wrapper">
+    <div id="left">
 <div class="buy">
     <h1>Buy</h1>
     <ul>
-        <li>Some Text 1</li>
-        <li>Some Text 2</li>
-        <li>Some Text 3</li>
+        <li>DAIRY
+            <p>buy products from this site which you do not want to get wasted .</p>
+            <p>buy dairy products from this site i  cheaper prices and become a eco person.</p>
+            <p>buy butter,cheese,yogurt,milk,etc from this site.</p>
+        </li>
+        <li>NUTS
+                <p>buy products from this site which you do not want to get wasted .</p>
+                <p>buy dairy products from this site i  cheaper prices and become a eco person.</p>
+                <p>buy cashew,dates,etc from this site.</p>
+        </li>
+        <li>VEGGIES
+                <p>buy products from this site which you do not want to get wasted .</p>
+                <p>buy dairy products from this site i  cheaper prices and become a eco person.</p>
+                <p>buy carrot,raddish,tomato,etc from this site.</p>
+        </li>
+        <LI>FRUITS
+                <p>buy products from this site which you do not want to get wasted .</p>
+                <p>buy dairy products from this site i  cheaper prices and become a eco person.</p>
+                <p>buy straberries,cherries,mangoes,etc from this site.</p>
+        </LI>
+       
     </ul>
-    <a href="/buyer/home" class="btn btn-primary">Go Buy</a>
+    <div class="text-center btm">
+    <a href="/buyer/home" class="btn btn-primary">Buy</a>
+    </div>
 </div>
+    </div>
+    <div id="right">
 <div class="sell">
     <h1>Sell</h1>
     <ul>
-        <li>Some Text 1</li>
-        <li>Some Text 2</li>
-        <li>Some Text 3</li>
+            <li>DAIRY
+                <p>sell dairy products which are about to expire and you do not want to use them.</p>
+                <p>sell items like butter,cheese,yogurt,milk over this platform.</p>
+                <p>Become a ecofriendly person.</p>
+            </li>
+            <li>NUTS
+                    <p>sell dairy products which are about to expire and you do not want to use them.</p>
+                    <p>sell items like cashew,dates over this platform.</p>
+                    <p>Become a ecofriendly person.</p>
+            </li>
+            <li>VEGGIES
+                    <p>sell dairy products which are about to expire and you do not want to use them.</p>
+                    <p>sell items like  carrot,raddish,tomato over this platform.</p>
+                    <p>Become a ecofriendly person.</p>
+            </li>
+            <LI>FRUITS
+                    <p>sell dairy products which are about to expire and you do not want to use them.</p>
+                    <p>sell items like straberries,cherries,mangoes  over this platform.</p>
+                    <p>Become a ecofriendly person.</p>
+            </LI>
     </ul>
+    <div class="text-center btm">
     <a href="/seller/form" class="btn btn-primary">Sell</a>
+    </div>
 </div>
 </div>
-</body>
-</html>
+</div>
+</div>
+<% include partials/buyerFooter %>
